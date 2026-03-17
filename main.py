@@ -28,3 +28,6 @@ def simulate_cgroup_limit(memory_mb=128):
     print(f"  echo {os.getpid()} > cgroup.procs")
  
 print("cgroup controllers:", read_cgroup_info())
+print("Namespaces:", list_namespaces())
+print("Memory RSS:", get_proc_memory())
+simulate_cgroup_limit(256)
